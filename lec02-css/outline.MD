@@ -2,12 +2,14 @@
 
 ## CSS
 -  inline style
+- style
+- css(my.css/ https://....bootstraps.min.css)
 
 ## CSS Selector
 - elements selector: 
 ```
 h1{
-    color:border;
+    color:red;
 }
 ```
 - class selector
