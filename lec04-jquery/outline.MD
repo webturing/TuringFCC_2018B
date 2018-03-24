@@ -16,3 +16,13 @@ $(document).ready(function(){
 });
 </script>
 ```
+
+### JQuery 
+- $("tagName")
+- $(".className")
+- $("#idName")
+- $().parent()
+- $().children()
+- $().css()
+- $().html()
+- $().prop()
