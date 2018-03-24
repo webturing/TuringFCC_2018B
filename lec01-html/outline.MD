@@ -1,10 +1,15 @@
 #lec01:HTML
+
 ##Introduction
+
 ### FCC
 - 中文网站 https://www.freecodecamp.cn
 - 英文官网 https://www.freecodecamp.org
-- 参考网站 https://www.w3school.com.cn
+### 参考网站
+-(W3SCHOOL)[!https://www.w3school.com.cn]
+
 - Mozillar Development Networks
+
 ### Developement Tools:
 - Sublime
 - WebStorm
