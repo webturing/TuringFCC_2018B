@@ -2,14 +2,13 @@
 
 ## CSS
 -  inline style
-- style
-- css(my.css/ https://....bootstraps.min.css)
+-
 
 ## CSS Selector
 - elements selector: 
 ```
 h1{
-    color:red;
+    color:border;
 }
 ```
 - class selector
@@ -31,3 +30,7 @@ h1{
 - id style
 - inline style
 - important style
+
+## CSS Box Model
+-padding
+-margin
