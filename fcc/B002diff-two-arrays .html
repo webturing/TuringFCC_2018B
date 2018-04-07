@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function diffArray(arr1, arr2) {
+        return arr1.concat(arr2).filter(function (e) {
+            return arr1.indexOf(e) < 0 || arr2.indexOf(e) < 0;
+        });
+    }
+
+    alert(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+</script>
+</body>
+</html>
