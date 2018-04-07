@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //document.writeln(letters.length);
+    var encode = function (ch) {
+        return letters.indexOf(ch) < 0 ? ch : letters[(letters.indexOf(ch) + 13) % 26];
+    };
+    var rot13 = function (str) { // LBH QVQ VG!
+        return str.split('').map(encode).join('');
+    };
+
+    document.writeln(rot13("SERR PBQR PNZC"));
+
+</script>
+</body>
+</html>
