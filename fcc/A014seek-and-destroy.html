@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    var destroyer = function (arr) {
+        arr = Array.prototype.slice.call(arguments);
+        var A = arr.shift();
+        var K = arr;
+        return K.reduce(function (s, k) {
+            return s = s.filter(function (e) {
+                return e != k;
+            });
+        }, A);
+    };
+
+    document.writeln(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+
+</script>
+</body>
+</html>
