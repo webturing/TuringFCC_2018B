@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function convert(num) {
+        var nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        var romans = ["M", "CM", "D", "Cd", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+        var str = '';
+        nums.forEach(function (item, index, array) {
+            while (num >= item) {
+                str += romans[index];
+                num -= item;
+            }
+        });
+
+        return str;
+    }
+
+    alert(convert(36));
+</script>
+</body>
+</html>
