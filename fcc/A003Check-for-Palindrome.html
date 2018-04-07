@@ -10,13 +10,13 @@
 <body>
 <script>
     function palindrome(str) {
-        str = str.toLowerCase().replace(/\W+|_/g);
+        str = str.toLowerCase().replace(/\W+|_/g, '');
         var rev = str.split('').reverse().join('');
         return str === rev;
     }
 
     document.writeln(palindrome("eye"));
-
+    document.writeln(palindrome("Eye_"));
 </script>
 </body>
 </html>
