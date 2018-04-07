@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var letters = 'abcdefghijklmnopqrstuvwxyz';
+    var fearNotLetter = function (w) {
+        var pos = -1;
+        for (var i = 0; i < w.length - 1; i++) {
+            if (letters.indexOf(w[i + 1]) - letters.indexOf(w[i]) != 1) {
+                pos = i;
+                break;
+            }
+        }
+        if (pos >= 0)
+            return letters[pos + 1];
+        else
+            return undefined;
+    };
+
+    document.writeln(fearNotLetter("abcd"));
+
+</script>
+</body>
+</html>
