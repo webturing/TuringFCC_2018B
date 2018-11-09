@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myReplace(str, before, after) {
+        var arr = [];
+        /*获取参数before的第一个字符*/
+        var test = before.charAt(0);
+        /*判断参数before的第一个字符是大写还是小写*/
+        if (test > 'A' && test < 'Z') {
+            /* 如果参数before的第一个字符是大写，将参数after的首字母转大写*/
+            /* 如果参数before的第一个字符是小写，将参数after的首字母不用管*/
+            after = after.substring(0, 1).toUpperCase() + after.substring(1);
+        }
+        /*字符串转为数组*/
+        arr = str.split(" ");
+        /*声明变量ok保存找出参数before所在数组中的下标值*/
+        var ok = arr.indexOf(before);
+        /*在参数before的位置开始删除一个数组元素，插入after*/
+        arr.splice(ok, 1, after);
+        /*将数组转为字符串输出*/
+        var ss = arr.join(" ");
+        return ss;
+    }
+
+    var result = myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+    document.write(result);
+
+</script>
+</body>
+</html>
