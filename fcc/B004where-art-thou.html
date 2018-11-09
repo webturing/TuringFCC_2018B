@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function where(collection, source) {
+        var arr = [];
+        var keys = Object.keys(source);
+        arr = collection.filter(function (val) {
+            for (var i = 0; i < keys.length; i++) {
+                if (!val.hasOwnProperty(keys[i]) || val[keys[i]] !== source[keys[i]]) {
+                    return false;
+                }
+            }
+            return true;
+        });
+        return arr;
+    }
+
+    var result = where([{first: "Romeo", last: "Montague"}, {first: "Mercutio", last: null}, {
+        first: "Tybalt",
+        last: "Capulet"
+    }], {last: "Capulet"});
+    document.write(result);
+
+</script>
+</body>
+</html>
