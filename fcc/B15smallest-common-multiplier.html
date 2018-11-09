@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function gcd(a, b) {
+        if (b === 0) return a;
+        return gcd(b, a % b);
+    }
+
+    function lcm(a, b) {
+        return a * b / gcd(a, b);
+    }
+
+    function smallestCommons(arr) {
+        var ret = 1;
+        //arr.map(function(val){ret=lcm(ret,val);});
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+        for (var i = arr[0]; i <= arr[1]; i++)
+            ret = lcm(ret, i);
+        return ret;
+    }
+
+
+    smallestCommons([1, 5]);
+</script>
+</body>
+</html>

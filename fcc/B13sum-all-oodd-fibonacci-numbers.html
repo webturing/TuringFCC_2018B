@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function sumFibs(num) {
+        var fib = [1, 1];
+        var a = fib[0], b = fib[1];
+        while (a + b <= num) {
+            var c = a + b;
+            a = b;
+            b = c;
+            if (c % 2 == 1)
+                fib.push(c);
+        }
+        return fib.reduce(function (sum, val) {
+            return sum + val;
+        }, 0);
+    }
+
+    sumFibs(4);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function spinalCase(str) {
+        function replacer(match) {
+            return ' ' + match;
+        }
+
+        if (str[0] <= 'z' && str[0] >= 'a') {
+            str = str.replace(/[A-Z]+/g, replacer);
+        }
+        str = str.replace(/\s/g, '-').replace(/_/g, '-').toLowerCase();
+        return str;
+    }
+
+    spinalCase('This Is Spinal Tap');
+
+</script>
+</body>
+</html>
