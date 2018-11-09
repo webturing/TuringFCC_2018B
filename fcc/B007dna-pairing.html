@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function pair(str) {
+        var arr = str.split('');
+        var pair = '';
+        return arr.map(function (item) {
+            switch (item) {
+                case 'C':
+                    pair = 'G';
+                    break;
+                case 'G':
+                    pair = 'C';
+                    break;
+                case 'A':
+                    pair = 'T';
+                    break;
+                case 'T':
+                    pair = 'A';
+                    break;
+            }
+            return [item, pair];
+        });
+    }
+
+
+    document.write(pair("GCG"));
+
+</script>
+</body>
+</html>
