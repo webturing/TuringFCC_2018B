@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function translate(str) {
+        var myStr = '';
+        var regex = /[aeiou]/gi;
+        if (str[0].match(regex)) {
+            myStr = str + 'way';
+        } else {
+            var index = str.indexOf(str.match(regex)[0]);
+            myStr = str.substr(index) + str.substring(0, index) + 'ay';
+        }
+        return myStr;
+    }
+
+    var result = translate("consonant");
+    document.write(result);
+
+</script>
+</body>
+</html>
