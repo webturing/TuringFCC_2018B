@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function pairwise(arr, arg) {
+        var a = arr.reduce(function (prev, currv, index, array) {
+            var l = array.length;
+            for (var i = index + 1; i < l; i++) {
+                if (array[index] + array[i] === arg) {
+                    arr[index] = "false";
+                    arr[i] = "false";
+                    return prev + i + index;
+                }
+            }
+            return prev;
+        }, 0);
+        return a;
+    }
+
+    pairwise([1, 4, 2, 3, 0, 5], 7);
+</script>
+</body>
+</html>

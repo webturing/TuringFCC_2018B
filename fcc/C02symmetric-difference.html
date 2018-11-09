@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sym(args) {
+        var arr = [];
+        for (var i = 0; i < arguments.length; i++) {
+            arr.push(arguments[i]);
+        }
+        var temp = arr.reduce(function (prev, cur, index, array) {
+            var a = prev.filter(function (item) {
+                return cur.indexOf(item) < 0;
+            });
+            var b = cur.filter(function (item) {
+                return prev.indexOf(item) < 0;
+            });
+            return a.concat(b);
+        });
+        return temp.filter(function (item, index, array) {
+            return array.indexOf(item) == index;
+        });
+    }
+
+    sym([1, 2, 3], [5, 2, 1, 4]);
+
+
+</script>
+</body>
+</html>

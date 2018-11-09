@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function telephoneCheck(str) {
+        //正则表达式
+        //^1?表示以1开头，1匹配0次或1次
+        //\d{3}匹配一个0-9的数字三次
+        //\(\d{3}\)匹配（一个0-9的数字三次），比上面多一个括号，左右括号分别需要加上转义字符\
+        //\s?表示空白字符匹配0次或1次
+        //[ -]?表示空格或者连字符-匹配0次或1次
+        //\d{4}$表示已4位数字结尾($)
+        var re = /^1?\s?(\d{3}|\(\d{3}\))[ -]?\d{3}[ -]?\d{4}$/;
+        return re.test(str);
+    }
+
+
+    telephoneCheck("555-555-5555");
+
+</script>
+</body>
+</html>
